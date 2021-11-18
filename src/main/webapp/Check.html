@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name=viewport content="width=device-width, initial-scale=1, user-scalable=0">
+<meta charset="utf-8" />
+<link rel="stylesheet" href="css/core.css">
+<link rel="stylesheet" href="css/main.css">
+<title>만다라트</title>
+</head>
+<body>
+<div class="page-hdr"> 활동점검 </div> 
+
+<div class="achieve">
+<div class="achieve-title">이번 달 목표 달성률</div>
+<div class="achieve-percent">80%</div>
+</div>
+
+<div class="middle-achieve">
+	<div class="rank" id=1st >1위</div>
+	<div class="rank" id=2st >2위</div>
+	<div class="rank" id=3st >3위</div>
+	<div class="rank" id=4st >4위</div>
+</div>
+
+<div class="content"></div>
+<div class="list">게시글</div>
+
+<div class="page-body">
+	<div class="page-mnu">
+		<div class="menu" onclick="friend()">
+		<img src="https://i.imgur.com/JBXRb3O.png"></div> 
+		<div class="menu" onclick="community()">
+		<img src="https://i.imgur.com/3F1bCYa.png"></div> 
+		<div class="menu" onclick="mandal()">
+		<img src="https://i.imgur.com/mdo2SNQ.png"></div>
+		<div class="menu" onclick="check()">
+		<img src="https://i.imgur.com/ml9uCkN.png"></div>
+		<div class="menu" onclick="myInfo()">
+		<img src="https://i.imgur.com/1eBx8r8.png"></div>
+	</div>
+</div>
+</body>
+</html>
+
+<script src="js/jquery-3.6.0.min.js"></script> 
+<script src="js/core.js"></script>
+<script>
+	function friend() {window.location.href = "friend.html";}
+	function community() {window.location.href = "Community.html";}
+	function mandal() {window.location.href = "main.html";}
+	function check() {window.location.href = "Check.html";}
+	function myInfo() {window.location.href = "myInfo.html";}
+</script>
