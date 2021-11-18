@@ -5,15 +5,15 @@
 <link rel="stylesheet" href="css/core.css">
 <link rel="stylesheet" href="css/main.css">
 
-<title>MySNS</title>
+<title>만다라트-내 정보</title>
 </head>
 
 <body>
-	<div class="page-hdr">MySNS</div> 
+	<div class="page-hdr">내 정보</div> 
 	<div class="page-body"> 
 		<div class="page-mnu">
 			<div class="menu" onclick="friend()">
-			<img src="https://i.imgur.com/JBXRb3O.png"></div> 
+			<img src="https://i.imgur.com/Vxk9qTW.png"></div> 
 			<div class="menu" onclick="community()">
 			<img src="https://i.imgur.com/3F1bCYa.png"></div> 
 			<div class="menu" onclick="mandal()">
@@ -25,16 +25,13 @@
 	</div>
 		
 		<div id="profile" class="section pad-24 mtop-30">
-			<div class="image">#프로필 사진</div>
 			
-			<input type="file" id="image"> 
-			닉네임 : <textarea id="name" class="mtop-10"> </textarea> 
-		
-			<input type="button" onclick="profileupdate()" value="완료">
+			<input type="file" id="image">
+			<textarea id="name" class="mtop-10"> </textarea> 
+			
+			<input id="nickname-button" type="button" onclick="profileupdate()" value="업데이트">
 		</div>
 	
-	
-		
 		<div id="content" class="section"></div>
 		<input type="button" class="mymandal-button" onclick="mymandal()" value="내 만다라트">
 		<input  type="button" class="myfeed-button" onclick="myfeed()" value="내 게시글">

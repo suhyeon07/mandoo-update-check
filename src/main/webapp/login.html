@@ -3,6 +3,7 @@
 <meta name=viewport content="width=device-width, initial-scale=1, user-scalable=0">
 <meta charset="utf-8" />
 <link rel="stylesheet" href="css/core.css">
+<link rel="stylesheet" href="css/main.css">
 <title>MySNS</title>
 <style>
 	.desc {
@@ -15,17 +16,19 @@
 </head>
 
 <body>
-<div class="page-hdr"> 만다라트 </div> 
+<div class="main-icon">
+<img src="https://i.imgur.com/qV3fm2j.png">
+</div>
 
 <div class="page-body">
 	<div class="section pad-24 mtop-30">
 		<input id="id" type="text" placeholder="아이디 (이메일주소)" required>
 		<input id="ps" type="password" class="mtop-10" placeholder="패스워드" required> 
 		<input type="submit" class="mtop-20" value="로그인" onclick = "login()">
-		<input type="button" class="mtop-20" value="회원가입" onclick = "signup()">
-	</div>
-</div>
+		<div id="move-to-signup" onclick = "signup()">회원가입</div>
+	</div>		
 
+</div>
 
 </html>
 

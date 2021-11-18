@@ -100,15 +100,18 @@ input.post-button{
 
 input.mymandal-button{
 	background: url("https://i.imgur.com/xTvGbPw.png" ) no-repeat;
-	float:left;
+	background-position: center;
 	width:50%;
-
+	height:150px;
+	background-color: white; 
 }
 
 input.myfeed-button{
 	background: url("https://i.imgur.com/jDUvIOd.png" ) no-repeat;
-	float:left;
+	background-position: center;
 	width:50%;
+	height:150px;	
+	background-color: white; 
 }
 
 
@@ -137,3 +140,4 @@ input.myfeed-button{
 	text-align: center; 
 	color: #888;
 }
+
