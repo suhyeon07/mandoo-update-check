@@ -6,22 +6,16 @@
 <%
 request.setCharacterEncoding("utf-8");
 
+
 String uid = request.getParameter("id");
-String jsonstr = request.getParameter("jsonstr");
+String FG = request.getParameter("FG");
 
-UserDAO dao = new UserDAO();
-Mandal_goalDAO mandaldao = new Mandal_goalDAO();
 
-if (dao.exists(uid)) {
-	out.print("EX"); 
-	return;
-	}
-if (dao.insert(uid, jsonstr)){
-	session.setAttribute("id", uid);
+Mandal_goalDAO dao = new Mandal_goalDAO();
+
+if (dao.updateFG(uid,FG)){
 	out.print("OK");
-	mandaldao.insert(uid);
-	}
-	
+}
 else {
 	out.print("ER");
 	}

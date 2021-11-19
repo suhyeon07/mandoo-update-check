@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta name=viewport content="width=device-width, initial-scale=1, user-scalable=0">
+ <meta charset="utf-8" />
+ <link rel="stylesheet" href="css/core.css">
+ <title>만다라트</title>
+ <style>
+	 .pad-4 { padding: 0 4px; }
+	 textarea {
+		 float: left;
+		 width: 100%;
+		 height: 160px;
+		 padding: 16px;
+		 box-sizing: border-box;
+		 font-size: 1.0em;
+		 font-family: 'Malgun Gothic', 'Arial';
+		 border: 1px solid #ddd;
+		 border-radius: 4px;
+		 outline: none;
+		}
+	input[type=file] {
+		padding: 0px; border: none; 
+		outline: none; font-size: 0.95em;
+		}
+	.desc {
+		float: left;
+		width: 100%; margin-bottom: 5px; 
+		font-size: 0.95em; color: #888;
+		}
+</style> 
+</head>
+
+
+<body>
+
+	<div class="page-hdr">만다라트</div> 
+	
+	<div class="page-body">
+		<div class="section pad-24 mtop-30">
+			//////////////////////////////////////////////////////////<br><br>
+			1번 중간 목표를 적어주세요 : <input type="text" id="MG01" class="mtop-10"></input><br>
+			2번 중간 목표를 적어주세요 : <input type="text" id="MG02" class="mtop-10"></input><br>
+			3번 중간 목표를 적어주세요 : <input type="text" id="MG03" class="mtop-10"></input><br>
+			4번 중간 목표를 적어주세요 : <input type="text" id="MG04" class="mtop-10"></input><br>
+			5번 중간 목표를 적어주세요 : <input type="text" id="MG05" class="mtop-10"></input><br>
+			6번 중간 목표를 적어주세요 : <input type="text" id="MG06" class="mtop-10"></input><br>
+			7번 중간 목표를 적어주세요 : <input type="text" id="MG07" class="mtop-10"></input><br>
+			8번 중간 목표를 적어주세요 : <input type="text" id="MG08" class="mtop-10"></input><br>
+			
+			
+			<input type="submit" class="mtop-30" value="업로드하기" onClick="upload()"> 
+		</div>
+	</div> 
+
+</body>
+</html>
+
+<script src="js/jquery-3.6.0.min.js"></script> 
+<script src="js/core.js"></script>
+
+<script>
+	$(document).ready(function() {
+		Page.init(setup); 
+	});
+	
+	var loginId = null;
+	function setup(uid){
+		loginId = uid;	
+	
+	}
+	
+	
+	function upload() {	
+		id = loginId;
+		
+		var MG01 = $("#MG01").val().trim(); 
+		var MG02 = $("#MG02").val().trim(); 
+		var MG03 = $("#MG03").val().trim(); 
+		var MG04 = $("#MG04").val().trim(); 
+		var MG05 = $("#MG05").val().trim(); 
+		var MG06 = $("#MG06").val().trim(); 
+		var MG07 = $("#MG07").val().trim(); 
+		var MG08 = $("#MG08").val().trim(); 
+	
+		var params = {id: id,MG01: MG01,MG02: MG02,
+						MG03: MG03,MG04: MG04,MG05: MG05,
+						MG06: MG06,MG07: MG07,MG08: MG08};
+		
+		var url = "jsp/Mymandal_MG.jsp";
+		
+		AJAX.call(url, params, function(data) {
+			var code = data.trim(); 
+			if (code == "ER") {
+				alert("작성 글의 업로드 중 오류가 발생하였습니다."); }
+			else {
+				alert("작성 글의 업로드가 완료되었습니다.");
+				}
+			});
+	}
+	
+</script>
