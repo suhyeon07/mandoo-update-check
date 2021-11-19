@@ -3,7 +3,8 @@
  <head>
  <meta name=viewport content="width=device-width, initial-scale=1, user-scalable=0">
  <meta charset="utf-8" />
- <link rel="stylesheet" href="css/core.css">
+<link rel="stylesheet" href="css/core.css">
+<link rel="stylesheet" href="css/main.css">
  <title>만다라트</title>
  <style>
 	 .pad-4 { padding: 0 4px; }
@@ -38,6 +39,9 @@
 	
 	<div class="page-body">
 		<div class="section pad-24 mtop-30">
+			<div class="back-icon" onclick="Mymandal()">
+			<img src="https://i.imgur.com/bXeUiMt.png">
+			</div>
 			//////////////////////////////////////////////////////////<br><br>
 			1번 중간 목표를 적어주세요 : <input type="text" id="MG01" class="mtop-10"></input><br>
 			2번 중간 목표를 적어주세요 : <input type="text" id="MG02" class="mtop-10"></input><br>
@@ -50,6 +54,19 @@
 			
 			
 			<input type="submit" class="mtop-30" value="업로드하기" onClick="upload()"> 
+		</div>
+		
+		<div class="page-mnu">
+			<div class="menu" onclick="friend()">
+			<img src="https://i.imgur.com/Vxk9qTW.png"></div> 
+			<div class="menu" onclick="community()">
+			<img src="https://i.imgur.com/3F1bCYa.png"></div> 
+			<div class="menu" onclick="mandal()">
+			<img src="https://i.imgur.com/HTSS3T0.png"></div>
+			<div class="menu" onclick="check()">
+			<img src="https://i.imgur.com/ml9uCkN.png"></div>
+			<div class="menu" onclick="myInfo()">
+			<img src="https://i.imgur.com/ivAbxaE.png"></div>
 		</div>
 	</div> 
 
@@ -99,4 +116,11 @@
 			});
 	}
 	
+	function friend() {window.location.href = "friend.html";}
+	function community() {window.location.href = "Community.html";}
+	function mandal() {window.location.href = "main.html";}
+	function check() {window.location.href = "Check.html";}
+	function myInfo() {window.location.href = "myInfo.html";}
+	function mymandal() {window.location.href = "Mymandal_01.html";}
+	function myfeed() {window.location.href = "myfeed.html";}
 </script>

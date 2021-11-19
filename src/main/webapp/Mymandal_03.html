@@ -1,0 +1,91 @@
+<html>
+<head>
+<meta name=viewport content="width=device-width, initial-scale=1, user-scalable=0"> 
+<meta charset="utf-8" />
+<link rel="stylesheet" href="css/core.css">
+<link rel="stylesheet" href="css/main.css">
+
+<title>만다라트-내 정보</title>
+</head>
+
+<body>
+	<div class="page-hdr">만다라트</div>
+	 
+	<div class="page-body"> 
+	<div class="section pad-24 mtop-30">		
+		<div class="back-icon" onclick="Mymandal_02()">
+		<img src="https://i.imgur.com/bXeUiMt.png">
+		
+		<input type="button" value="저장">
+		</div>
+		//////////////////////////////////////////////////////////<br><br>
+		세부 목표를 적어주세요 : <input type="text" id="FG" class="mtop-10"></input><br>
+		<input type="submit" class="mtop-30" value="업로드하기" onClick="upload()"> 
+		
+		
+		<div class="options">
+		<div class="options-title">요일 반복</div>
+    	<input type="checkbox" name="day" value="월" class="DayRepeat" id="mon" >
+    	<label for="mon">월</label>
+    	<input type="checkbox" name="day" value="화" class="DayRepeat" id="tue">
+    	<label for="tue">화</label>
+    	<input type="checkbox" name="day" value="수" class="DayRepeat" id="wen">
+    	<label for="wen">수</label>
+    	<input type="checkbox" name="day" value="목" class="DayRepeat" id="thr">
+    	<label for="thr">목</label>
+    	<input type="checkbox" name="day" value="금" class="DayRepeat" id="fri">
+    	<label for="fri">금</label>
+    	
+    	<div class="options-title">우선 순위</div>
+ 			<div class="priority">
+			<input type="radio" name="prt" value="1" id="one">
+			<label for="one">1</label>
+			<input type="radio" name="prt" value="2" id="two">
+			<label for="two">2</label>
+			<input type="radio" name="prt" value="3" id="three">
+			<label for="three">3</label>
+			<input type="radio" name="prt" value="4" id="four">
+			<label for="four">4</label>
+			<input type="radio" name="prt" value="5" id="five">
+			<label for="five">5</label>
+			</div>		
+			
+		<div class="options-title">세부목표 공개 여부</div>
+		<input type="checkbox">
+		
+		</div>
+		
+
+	</div>
+	<div class="page-mnu">
+		<div class="menu" onclick="friend()">
+		<img src="https://i.imgur.com/Vxk9qTW.png"></div> 
+		<div class="menu" onclick="community()">
+		<img src="https://i.imgur.com/3F1bCYa.png"></div> 
+		<div class="menu" onclick="mandal()">
+		<img src="https://i.imgur.com/HTSS3T0.png"></div>
+		<div class="menu" onclick="check()">
+		<img src="https://i.imgur.com/ml9uCkN.png"></div>
+		<div class="menu" onclick="myInfo()">
+		<img src="https://i.imgur.com/ivAbxaE.png"></div>
+	</div>
+	
+	</div>
+
+</body> 
+</html>
+
+
+
+<script src="js/jquery-3.6.0.min.js"></script> 
+<script src="js/core.js"></script>
+
+<script>
+	function friend() {window.location.href = "friend.html";}
+	function community() {window.location.href = "Community.html";}
+	function mandal() {window.location.href = "main.html";}
+	function check() {window.location.href = "Check.html";}
+	function myInfo() {window.location.href = "myInfo.html";}
+	function myfeed() {window.location.href = "myfeed.html";}
+	function Mymandal_02() {window.location.href = "Mymandal_02.html";}
+</script>

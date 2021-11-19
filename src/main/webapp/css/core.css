@@ -115,6 +115,44 @@ input.myfeed-button{
 	background-color: white; 
 }
 
+.open-or-not{
+	background-color: white;
+	border-radius: 4px;
+}
+
+
+/*input.toggle{
+	border-radius: 40%;
+	display:inline-block;
+	width:80px;
+	height:30px;
+	position:relative;
+	margin:10px;
+}
+
+.toggle:before{
+	content:" OFF";
+	text-align:left;
+	background-color : #FFB300;
+	border-radius: 30%;
+	display:inline-block;
+	width:80px;
+	height:40px;
+	position:absolute;
+	color:white;
+	font-weight:bold;
+	font-size:15pt;
+}
+
+.toggle:after{
+	content:'';
+	background-color: white;
+	display:inline-block;
+	width:30px;
+	height:30px;
+	border-radius: 50%;
+	position:absolute;
+}
 
  .page-footer {
 	z-index: 10;
@@ -129,6 +167,8 @@ input.myfeed-button{
 	background-color: #f6f6f6; 
 	color: #666;
 	}
+*/
+
 
 .hide { display: none; } 
 

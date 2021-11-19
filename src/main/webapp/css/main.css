@@ -40,10 +40,11 @@
 }
 
 #move-to-signup{
-	text-align:right;
+	text-align:center;
 	color: #707070;
 	padding-right:10px;
-	font-weight:bold;
+	float:right;
+	width:70px;
 }
 
 .add-friends{
@@ -70,7 +71,7 @@
 }
 
 #more-list{
-	mmargin-bottom: 15%;
+	margin-bottom: 15%;
 }
 
 #more-list-button{
@@ -224,4 +225,54 @@ feed2 {
 }
 #fth{
 	color: #707070;
+}
+
+input[class="DayRepeat"] + label{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 5px;
+    padding: 2px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(122, 122, 122);
+}
+
+input[class="DayRepeat"]:checked + label {
+    padding: 0px;
+    border: 2px solid #FFB301;
+    color: #FFB301;
+    border-radius: 100%;
+}
+
+input[class="DayRepeat"] {
+    display: none;
+}
+
+.priority input{
+	display:none;
+}
+
+.priority input + label{
+	font-size:20pt;
+	font-weight:bold;
+	color:#707070;
+}
+
+.priority input:checked + label{
+	color: #FFB301;
+	border-radius: 100%;
+}
+
+.options{
+	text-align:center;
+	background-color:white;
+	border-radius: 8%;
+}
+.options-title{
+	font-weight:bold;
+	margin:20px;
+	margin-top:40px;
 }
