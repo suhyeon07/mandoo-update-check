@@ -1,0 +1,241 @@
+<html>
+<head>
+	<meta name=viewport content="width=device-width, initial-scale=1, user-scalable=0"> 
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="css/core.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/inputMyMandal.css">
+	
+	<title>만다라트-내 정보</title>
+</head>
+<body>
+	<div class="page-hdr">만다라트</div>
+	<div class="page-body"> 
+		<div class="section pad-24 mtop-30">		
+			<div class="back-icon" onclick="Mymandal_02()">
+		 		<img src="https://i.imgur.com/bXeUiMt.png">
+			</div>
+	
+	<script type="text/javascript" src="js/Mandal_Art_CONTENTS.js"></script>
+        <div id="MandalArt">
+           <div class="box" id="box1" onclick="goal01()"><div class="con"></div></div>
+ 	       <div class="box" id="box2"><div class="con"></div></div>
+           <div class="box" id="box3"><div class="con"></div></div>
+           <div class="box" id="box4"><div class="con"></div></div>
+           <div class="box" id="box5"><div class="con"></div></div>
+           <div class="box" id="box6"><div class="con"></div></div>
+           <div class="box" id="box7"><div class="con"></div></div>
+           <div class="box" id="box8"><div class="con"></div></div>
+           <div class="box" id="box9"><div class="con"></div></div>
+        </div>
+        
+        <script type="text/javascript">
+		//세부목표 출력
+		for(var i=0;i<9;i++)
+			document.getElementsByClassName("con")[i].innerHTML=contents[i+1];
+		</script>    
+		
+		<br><br><br><br><br><br><br><br><br><br><br><br>
+		
+		<input type="button" value="다음" onClick="Mymandal_03_MG02()">
+		<br><br><br>
+		
+		<input type="text" Placeholder="세부 목표를 적어주세요" id="contents" class="mtop-10"></input><br>
+		
+		
+		<input type="submit" class="mtop-30" value="업로드하기" onClick="upload()"> 
+		
+		<br><br><br><br><br><br>
+		
+		<div class="options">
+			<div class="options-title">요일 반복</div>
+	    	<input type="checkbox" name="day" value="월" class="DayRepeat" id="mon" >
+	    	<label for="mon">월</label>
+	    	<input type="checkbox" name="day" value="화" class="DayRepeat" id="tue">
+	    	<label for="tue">화</label>
+	    	<input type="checkbox" name="day" value="수" class="DayRepeat" id="wen">
+	    	<label for="wen">수</label>
+	    	<input type="checkbox" name="day" value="목" class="DayRepeat" id="thr">
+	    	<label for="thr">목</label>
+	    	<input type="checkbox" name="day" value="금" class="DayRepeat" id="fri">
+	    	<label for="fri">금</label>
+	    	
+	    	<div class="options-title">우선 순위</div>
+	 			<div class="priority">
+					<input type="radio" name="prt" value="1" id="one">
+					<label for="one">1</label>
+					<input type="radio" name="prt" value="2" id="two">
+					<label for="two">2</label>
+					<input type="radio" name="prt" value="3" id="three">
+					<label for="three">3</label>
+					<input type="radio" name="prt" value="4" id="four">
+					<label for="four">4</label>
+					<input type="radio" name="prt" value="5" id="five">
+					<label for="five">5</label>
+				</div>		
+				
+			<div class="options-title">세부목표 공개 여부
+				<input type="checkbox">
+			</div>
+		</div>
+		
+
+	</div>
+	<div class="page-mnu">
+		<div class="menu" onclick="friend()">
+		<img src="https://i.imgur.com/Vxk9qTW.png"></div> 
+		<div class="menu" onclick="community()">
+		<img src="https://i.imgur.com/3F1bCYa.png"></div> 
+		<div class="menu" onclick="mandal()">
+		<img src="https://i.imgur.com/HTSS3T0.png"></div>
+		<div class="menu" onclick="check()">
+		<img src="https://i.imgur.com/ml9uCkN.png"></div>
+		<div class="menu" onclick="myInfo()">
+		<img src="https://i.imgur.com/ivAbxaE.png"></div>
+	</div>
+	
+	</div> <!-- bodydiv -->
+</body> 
+</html>
+
+
+
+<script src="js/jquery-3.6.0.min.js"></script> 
+<script src="js/core.js"></script>
+
+<script>
+	var count=1;
+	
+	$(document).ready(function() {
+		Page.init(setup); 
+	});
+	
+	var loginId = null;
+	
+	function setup(uid){
+		loginId = uid;	
+	}
+	
+	
+	function upload() {
+		id = loginId;
+		
+		var contents = $("#contents").val().trim(); 
+	
+		var monval=null;
+		var tueval=null;
+		var wedval=null;
+		var thuval=null;
+		var frival=null;
+		//var count=null;
+		
+		$('input:checkbox[name="day"]').each(function() {
+		    if(this.checked){
+		    	if(this.value=="월"){
+		    		monval="1";
+		    	}
+		    	if(this.value=="화"){
+		    		tueval="1";
+		    	}
+		    	if(this.value=="수"){
+		    		wedval="1";
+		    	}
+		    	if(this.value=="목"){
+		    		thuval="1";
+		    	}
+		    	if(this.value=="금"){
+		    		frival="1";
+		    	}
+	    } //else {
+	    	//count+=1;
+	    	 //if(count==5) alert("요일을 선택하세요.");
+	    	 //}
+		    })
+		
+		var prtval = $('input[name="prt"]:checked').val();
+		if(prtval==undefined) prtval=null;
+
+		
+		var jsonobj = {contents: contents,mon:monval,tue:tueval,wed:wedval,thu:thuval,fri:frival, priority:prtval};
+		
+		var params = new FormData();
+		params.append("id", id);
+		params.append("MG_no","3");
+		
+		if(count == 1){
+			var jsonstr_goal01 = JSON.stringify(jsonobj);
+			params.append("jsonstr_goal01",jsonstr_goal01);
+			var url ="jsp/Mymandal_goal.jsp";
+			count++;
+			upload2(url,params);
+			return;
+		}
+		else if(count == 2){
+			var jsonstr_goal02 = JSON.stringify(jsonobj);
+			params.append("jsonstr_goal02",jsonstr_goal02);
+			var url ="jsp/Mymandal_goal.jsp";
+			count++;
+			upload2(url,params);
+		}
+		else if(count == 3){
+			var jsonstr_goal03 = JSON.stringify(jsonobj);
+			params.append("jsonstr_goal03",jsonstr_goal03);
+			var url ="jsp/Mymandal_goal.jsp";
+			count++;
+			upload2(url,params);
+		}
+		else if(count == 4){
+			var jsonstr_goal04 = JSON.stringify(jsonobj);
+			params.append("jsonstr_goal04",jsonstr_goal04);
+			var url ="jsp/Mymandal_goal.jsp";
+			count++;
+			upload2(url,params);
+		}
+		else if(count == 5){
+			var jsonstr_goal05 = JSON.stringify(jsonobj);
+			params.append("jsonstr_goal05",jsonstr_goal05);
+			var url ="jsp/Mymandal_goal.jsp";
+			count++;
+			upload2(url,params);
+		}else if(count == 6){
+			var jsonstr_goal06 = JSON.stringify(jsonobj);
+			params.append("jsonstr_goal06",jsonstr_goal06);
+			var url ="jsp/Mymandal_goal.jsp";
+			count++;
+			upload2(url,params);
+		}else if(count == 7){
+			var jsonstr_goal07 = JSON.stringify(jsonobj);
+			params.append("jsonstr_goal07",jsonstr_goal07);
+			var url ="jsp/Mymandal_goal.jsp";
+			count++;
+			upload2(url,params);
+		}else if(count == 8){
+			var jsonstr_goal08 = JSON.stringify(jsonobj);
+			params.append("jsonstr_goal08",jsonstr_goal08);
+			var url ="jsp/Mymandal_goal.jsp";
+			count++;
+			upload2(url,params);
+		}
+	}
+	
+	function upload2(url,params) {
+		AJAX.call(url, params, function(data) {
+			var code = data.trim(); 
+			if (code == "ER") {
+				alert("작성 글의 업로드 중 오류가 발생하였습니다."); }
+			else {
+				alert("작성 글의 업로드가 완료되었습니다.");
+				//window.location.reload();
+				}
+			},true);
+	}
+
+	function friend() {window.location.href = "friend.html";}
+	function community() {window.location.href = "Community.html";}
+	function mandal() {window.location.href = "main.html";}
+	function check() {window.location.href = "Check.html";}
+	function myInfo() {window.location.href = "myInfo.html";}
+	function myfeed() {window.location.href = "myfeed.html";}
+	function Mymandal_02() {window.location.href = "Mymandal_02.html";}
+	function Mymandal_03_MG02() {window.location.href = "Mymandal_03_MG02.html";}
+</script>
