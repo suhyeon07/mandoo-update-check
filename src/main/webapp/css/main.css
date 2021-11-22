@@ -13,30 +13,22 @@
 	float : left;
 	width : 20%;
 	margin: 10 auto;
+
 }
 
-#profile{
-	background-color:#ffffff;
-	border-radius:5%;
-	margin:5px;
-	padding:10px;
+.section {
+	float: left;
+	width: 100%;
+	box-sizing: border-box;	
 }
-
-#profile #image{
-	border-radius:100%;
-	width:100px;
-	height:100px;
-	margin:10px;
+	
+.back-icon{
+	margin:15px;
 }
-
-#profile textarea{
-	resize:none;
-	width:150px;
-	border: #000000;
-	background: url("https://i.imgur.com/ARE8gos.png" ) no-repeat;
-	background-position:right;
-	margin-top:40px;
-	margin-left:10px;
+	
+.main-icon{
+	text-align : center;
+	padding-top : 5%; 
 }
 
 #move-to-signup{
@@ -45,6 +37,60 @@
 	padding-right:10px;
 	float:right;
 	width:70px;
+}
+
+#signup-title{
+	text-align :center;
+	color : #FFB300;
+	font-weight : bold;
+	margin : 5px;
+}
+
+#section1{
+    margin:15%;
+    width:70%;
+    text-align: center;
+}
+
+#section2{
+	width:100%;
+	box-sizing: border-box;
+	padding:20px;
+}
+
+#ToDoList{
+	background-color:white;
+	padding:20px;
+	border-radius:3%;
+	font-size:15px;
+}
+
+#ToDoList .submit{
+	width:100%;
+	height:40px;
+	border:none;
+	background-color: #FFB301;
+	border-radius:3%;
+	margin-top:20px;
+	color:white;
+	font-weight:bold;
+}
+
+#datepicker{
+	height:40px;
+}
+
+#mandalArtOption{
+	height:40px
+}
+
+
+#whichToDoList input.submit{
+	height:40px;
+	width:40px;
+	border:none;
+	background:url("https://i.imgur.com/LiEm5OB.png") no-repeat;
+	background-position:center;
 }
 
 .add-friends{
@@ -66,12 +112,18 @@
 	margin-top:50px;
 }
 
-#profile{
-	margin-top:60px;
-}
-
 #more-list{
 	margin-bottom: 15%;
+}
+
+input.post-button{		
+	background: url("https://i.imgur.com/MyQoqmI.png" ) no-repeat;
+	position:fixed;	
+	bottom:70px;	
+	right:0;
+	width:80px;
+	height:80px;
+	border:none;
 }
 
 #more-list-button{
@@ -80,6 +132,140 @@
 	background-position:center;
 }
 
+.achieve{
+	text-align:center;		
+	font-weight:bold;
+	background-color:#ffffff;
+	margin:10px;
+	margin-top:70px;		
+	border-radius:8%;	
+	padding:10px;	
+	height:280px;
+}
+
+.achieve-title{
+	text-align:center;
+	font-weight:bold;
+	margin:10px;
+	color:#707070;
+}
+
+.achieve-percent{
+	text-align:center;
+	font-size:60pt;
+	color:#FFB300;
+	font-weight:bold;
+	background-image: url("https://i.imgur.com/Kcti8sC.png");
+	background-size: 200px;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding:50px;
+}
+
+#percent{
+	float:left;
+	font-size:50pt;
+}
+
+.middle-achieve{
+	background-color:#ffffff;
+	margin:10px;		
+	border-radius:8%;
+	padding:10px;
+}
+
+.middle-achieve .rank{
+	margin:20px;
+	font-weight:bold;
+}
+
+#fst{
+	color:#FFB300;
+}
+#sec{
+	color:rgb(255, 200, 70);
+}
+#thr{
+	color:rgb(255, 215, 119);
+}
+#fth{
+	color: #707070;
+}
+
+.post-list{
+	background-color:#ffffff;
+	border-radius:8%;
+	padding:10px;
+	margin:10px;	
+}
+
+#profile{
+	background-color:#ffffff;
+	border-radius:5px;
+	padding:10px;	
+	margin-top:60px;
+}
+
+#profile #image{
+	/**border-radius:100%;
+	width:100px;
+	height:100px;**/
+	margin:10px;
+}
+
+#profile textarea{
+	resize:none;
+	width:150px;
+	border: #000000;
+	background: url("https://i.imgur.com/ARE8gos.png" ) no-repeat;
+	background-position:right;
+	margin-top:40px;
+	margin-left:10px;
+}
+
+input.mymandal-button{
+	background: url("https://i.imgur.com/EX052A5.png" ) no-repeat;
+	background-position: center;
+	width:50%;
+	height:190px;
+	background-color: white;
+
+}
+
+input.myfeed-button{
+	background: url("https://i.imgur.com/LXX8FBk.png" ) no-repeat;
+	background-position: center;
+	width:50%;
+	height:190px;	
+	background-color: white; 
+}
+
+#open-or-not{
+	background-color: white;
+	border-radius: 4px;
+	padding:30px;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+#open-or-not label{
+	padding:20%;
+
+}
+
+#open-or-not input{
+	float:right;
+	appearance:none;	
+	background: url(https://i.imgur.com/A72Ih3x.png) no-repeat;
+	background-position: center;
+	width:80px;
+	height:30px;
+	border:none;
+}
+#open-or-not input:checked{
+	background: url(https://i.imgur.com/afjeNZp.png) no-repeat;
+}
+	
 feed {
 	float: left;
 	width: 100%;
@@ -100,6 +286,7 @@ feed2 {
 	padding: 10px 16px; 
 	box-sizing: border-box;
 }
+
 .feed .author .photo {
 	float: left;
 	padding: 5px;
@@ -160,72 +347,6 @@ feed2 {
 	box-sizing: border-box;
 }
 
-.achieve{
-	text-align:center;		
-	font-weight:bold;
-	background-color:#ffffff;
-	margin:10px;
-	margin-top:70px;		
-	border-radius:8%;	
-	padding:10px;	
-	height:280px;
-}
-
-.achieve-title{
-	text-align:center;
-	font-weight:bold;
-	margin:10px;
-	color:#707070;
-}
-
-.achieve-percent{
-	text-align:center;
-	font-size:60pt;
-	color:#FFB300;
-	font-weight:bold;
-	background-image: url("https://i.imgur.com/Kcti8sC.png");
-	background-size: 200px;
-	background-position: center;
-	background-repeat: no-repeat;
-	padding:50px;
-}
-
-#percent{
-	float:left;
-	font-size:50pt;
-}
-
-.middle-achieve{
-	background-color:#ffffff;
-	margin:10px;		
-	border-radius:8%;
-	padding:10px;
-}
-
-.middle-achieve .rank{
-	margin:20px;
-	font-weight:bold;
-}
-
-.list{
-	background-color:#ffffff;
-	border-radius:8%;
-	padding:10px;
-	margin:10px;	
-}
-
-#fst{
-	color:#FFB300;
-}
-#sec{
-	color:rgb(255, 200, 70);
-}
-#thr{
-	color:rgb(255, 215, 119);
-}
-#fth{
-	color: #707070;
-}
 
 input[class="DayRepeat"] + label{
     display: inline-block;

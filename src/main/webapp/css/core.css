@@ -1,11 +1,4 @@
 @charset "UTF-8";
-.section {
-	float: left;
-	width: 100%;
-	box-sizing: border-box; 
-	}
-	
-	
 .pad-16 { padding: 0 16px; } 
 .pad-24 { padding: 0 24px; } 
 .pad-32 { padding: 0 32px; }
@@ -23,22 +16,6 @@ body {
 	font-size: 16px;
 	font-family: 'Malgun Gothic', 'Arial';
 	}
-	
-.back-icon{
-	margin:15px;
-}
-	
-.main-icon{
-	text-align : center;
-	padding-top : 5%; 
-}
-
-#signup-title{
-	text-align :center;
-	color : #FFB300;
-	font-weight : bold;
-	margin : 5px;
-}
 	
 .page-hdr {
 	z-index: 10;
@@ -68,7 +45,13 @@ body {
 .page-body input { 
 	float: left;
 	width: 100%;
-	padding: 0 16px; box-sizing: border-box; line-height: 50px; font-size: 1.0em; border: 1px solid #ddd; border-radius: 4px; outline: none;
+	padding: 0 16px; 
+	box-sizing: border-box; 
+	line-height: 50px; 
+	font-size: 1.0em; 
+	border: 1px solid #ddd; 
+	border-radius: 4px; 
+	outline: none;
 	}	
 	
 .page-body input[type=submit] {
@@ -87,88 +70,6 @@ body {
 	border: 1px solid #707070; 
 	border-radius: 4px;
 	}
-	
-input.post-button{		
-	background: url("https://i.imgur.com/MyQoqmI.png" ) no-repeat;
-	position:fixed;	
-	bottom:70px;	
-	right:0;
-	width:80px;
-	height:80px;
-	border:none;
-}
-
-input.mymandal-button{
-	background: url("https://i.imgur.com/xTvGbPw.png" ) no-repeat;
-	background-position: center;
-	width:50%;
-	height:150px;
-	background-color: white; 
-
-}
-
-input.myfeed-button{
-	background: url("https://i.imgur.com/jDUvIOd.png" ) no-repeat;
-	background-position: center;
-	width:50%;
-	height:150px;	
-	background-color: white; 
-}
-
-.open-or-not{
-	background-color: white;
-	border-radius: 4px;
-}
-
-
-/*input.toggle{
-	border-radius: 40%;
-	display:inline-block;
-	width:80px;
-	height:30px;
-	position:relative;
-	margin:10px;
-}
-
-.toggle:before{
-	content:" OFF";
-	text-align:left;
-	background-color : #FFB300;
-	border-radius: 30%;
-	display:inline-block;
-	width:80px;
-	height:40px;
-	position:absolute;
-	color:white;
-	font-weight:bold;
-	font-size:15pt;
-}
-
-.toggle:after{
-	content:'';
-	background-color: white;
-	display:inline-block;
-	width:30px;
-	height:30px;
-	border-radius: 50%;
-	position:absolute;
-}
-
- .page-footer {
-	z-index: 10;
-	position: fixed;
-	left: 0px; 
-	bottom: 0px; 
-	width: 100%; 
-	height: 50px; 
-	line-height: 50px; 
-	text-align: center; 
-	font-size: 0.85em; 
-	background-color: #f6f6f6; 
-	color: #666;
-	}
-*/
-
 
 .hide { display: none; } 
 
