@@ -38,13 +38,14 @@
 		
 		<br><br><br><br><br><br><br><br><br><br><br><br>
 		
-		<input type="button" value="다음" onClick="Mymandal_03_MG05()">
+		
+		<input type="text" Placeholder="세부 목표를 적어주세요" id="detail-contents" class="mtop-10"></input><br>
+		<input type="button" value="다음" id="next-mandal" onClick="Mymandal_03_MG05()">
 		<br><br><br>
 		
-		<input type="text" Placeholder="세부 목표를 적어주세요" id="contents" class="mtop-10"></input><br>
+
 		
 		
-		<input type="submit" class="mtop-30" value="업로드하기" onClick="upload()"> 
 		
 		<br><br><br><br><br><br>
 		
@@ -75,9 +76,11 @@
 					<label for="five">5</label>
 				</div>		
 				
-			<div class="options-title">세부목표 공개 여부
-				<input type="checkbox">
-			</div>
+			<div id="open-or-not" class="section">
+				<label>세부목표 공개 여부</label> 
+			<input type="checkbox" class="open-button" name="open-or-not" value="open">
+			</div>	 
+			<input type="submit" id="upload-button" class="mtop-30" value="업로드하기" onClick="upload()"> 
 		</div>
 		
 

@@ -7,7 +7,7 @@
 	driverClassName="com.mysql.jdbc.Driver" 
 	url="jdbc:mysql://localhost:3306/mandal?serverTimezone=UTC" 
 	username="root"
-	password="kim990312" 
+	password="1111" 
 	maxTotal="16" 
 	maxIdle="4" 
 	maxWaitMillis="-1" />

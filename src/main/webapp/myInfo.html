@@ -32,10 +32,12 @@
 	
 
 		<div id="content" class="section"></div>
-		<input type="button" class="mymandal-button" onclick="mymandal()" value="내 만다라트">
-		<input  type="button" class="myfeed-button" onclick="myfeed()" value="내 게시글">
-		<!--<input type="checkbox" class="toggle">-->
-		세부목표 공개 여부 <input type="checkbox">
+		<input type="button" class="mymandal-button" onclick="mymandal()" value="">
+		<input  type="button" class="myfeed-button" onclick="myfeed()" value="">
+		<div id="open-or-not" class="section">
+			<label>세부목표 공개 여부</label> 
+			<input type="checkbox" class="open-button" name="open-or-not" value="open">
+		</div>	
 		<input type="button" onclick="logout()" value="로그아웃">
 		<input type="button" onclick="withdraw()" value="회원탈퇴">
 	</div>
