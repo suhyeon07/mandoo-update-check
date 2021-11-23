@@ -49,4 +49,12 @@ CREATE TABLE IF NOT EXISTS mandal_goal(
 	up_date VARCHAR(128)
 );
 
+CREATE TABLE IF NOT EXISTS mandal_goal2(
+	id VARCHAR(128),
+	MG_no VARCHAR(128),
+	goal_no VARCHAR(128),
+	goal VARCHAR(1024),
+	up_date VARCHAR(128)
+);
+
 use mandal;

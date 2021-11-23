@@ -20,6 +20,7 @@
 	float: left;
 	width: 100%;
 	box-sizing: border-box;	
+	
 }
 	
 .back-icon{
@@ -47,8 +48,8 @@
 }
 
 #section1{
-    margin:15%;
-    width:70%;
+    margin:20% 10% 10% 10%;
+    width:auto;
     text-align: center;
 }
 
@@ -58,9 +59,14 @@
 	padding:20px;
 }
 
+#whichToDoList{
+	text-align:center;
+}
+
 #ToDoList{
 	background-color:white;
 	padding:20px;
+	margin-bottom:20%;
 	border-radius:3%;
 	font-size:15px;
 }
@@ -78,14 +84,18 @@
 
 #datepicker{
 	height:40px;
+	width:50%;
 }
 
 #mandalArtOption{
-	height:40px
+	height:40px;
 }
 
 
 #whichToDoList input.submit{
+	position: relative;
+    left: 3px;
+    top: 10px;
 	height:40px;
 	width:40px;
 	border:none;

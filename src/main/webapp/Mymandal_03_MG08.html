@@ -12,7 +12,7 @@
 	<div class="page-hdr">만다라트</div>
 	<div class="page-body"> 
 		<div class="section pad-24 mtop-30">		
-			<div class="back-icon" onclick="Mymandal_02()">
+			<div class="back-icon" onclick="Mymandal_03_MG07()">
 		 		<img src="https://i.imgur.com/bXeUiMt.png">
 			</div>
 	
@@ -38,7 +38,7 @@
 		
 		<br><br><br><br><br><br><br><br><br><br><br><br>
 		
-		<input type="button" value="다음" onClick="Mymandal_03_MG02()">
+		<input type="button" value="완료" onClick="myInfo()">
 		<br><br><br>
 		
 		<input type="text" Placeholder="세부 목표를 적어주세요" id="contents" class="mtop-10"></input><br>
@@ -116,7 +116,7 @@
 	function setup(uid){
 		loginId = uid;
 
-	var params = {id: uid,MG_no:"1"};
+	var params = {id: uid,MG_no:"8"};
 	
 	AJAX.call("jsp/MymandalGet_MG.jsp", params, function(data) {
 		mandalval = data.trim();
@@ -125,7 +125,7 @@
 	
 		//만다라트에 보이기
 		if(goal_no==1){
-			var params = {id: uid,MG_no:"1",goal_no: goal_no};
+			var params = {id: uid,MG_no:"8",goal_no: goal_no};
 			AJAX.call("jsp/MymandalGet.jsp", params, function(data) {
 				mandalval = JSON.parse(data.trim());
 				document.getElementsByClassName("con")[0].innerHTML=mandalval.contents; 
@@ -133,72 +133,55 @@
 			goal_no++;
 			
 		}if(goal_no==2){
-			var params = {id: uid,MG_no:"1",goal_no: goal_no};
+			var params = {id: uid,MG_no:"8",goal_no: goal_no};
 			AJAX.call("jsp/MymandalGet.jsp", params, function(data) {
 				mandalval = JSON.parse(data.trim());
 				document.getElementsByClassName("con")[1].innerHTML=mandalval.contents; 
 			});
 			goal_no++;
 		}if(goal_no==3){
-			var params = {id: uid,MG_no:"1",goal_no: goal_no};
+			var params = {id: uid,MG_no:"8",goal_no: goal_no};
 			AJAX.call("jsp/MymandalGet.jsp", params, function(data) {
 				mandalval = JSON.parse(data.trim());
 				document.getElementsByClassName("con")[2].innerHTML=mandalval.contents; 
 			});
 			goal_no++;
 		}if(goal_no==4){
-			var params = {id: uid,MG_no:"1",goal_no: goal_no};
+			var params = {id: uid,MG_no:"8",goal_no: goal_no};
 			AJAX.call("jsp/MymandalGet.jsp", params, function(data) {
 				mandalval = JSON.parse(data.trim());
 				document.getElementsByClassName("con")[3].innerHTML=mandalval.contents; 
 			});
 			goal_no++;
 		}if(goal_no==5){
-			var params = {id: uid,MG_no:"1",goal_no: goal_no};
+			var params = {id: uid,MG_no:"8",goal_no: goal_no};
 			AJAX.call("jsp/MymandalGet.jsp", params, function(data) {
 				mandalval = JSON.parse(data.trim());
 				document.getElementsByClassName("con")[5].innerHTML=mandalval.contents; 
 			});
 			goal_no++;
 		}if(goal_no==6){
-			var params = {id: uid,MG_no:"1",goal_no: goal_no};
+			var params = {id: uid,MG_no:"8",goal_no: goal_no};
 			AJAX.call("jsp/MymandalGet.jsp", params, function(data) {
 				mandalval = JSON.parse(data.trim());
 				document.getElementsByClassName("con")[6].innerHTML=mandalval.contents; 
 			});
 			goal_no++;
 		}if(goal_no==7){
-			var params = {id: uid,MG_no:"1",goal_no: goal_no};
+			var params = {id: uid,MG_no:"8",goal_no: goal_no};
 			AJAX.call("jsp/MymandalGet.jsp", params, function(data) {
 				mandalval = JSON.parse(data.trim());
 				document.getElementsByClassName("con")[7].innerHTML=mandalval.contents; 
 			});
 			goal_no++;
 		}if(goal_no==8){
-			var params = {id: uid,MG_no:"1",goal_no: goal_no};
+			var params = {id: uid,MG_no:"8",goal_no: goal_no};
 			AJAX.call("jsp/MymandalGet.jsp", params, function(data) {
 				mandalval = JSON.parse(data.trim());
 				document.getElementsByClassName("con")[8].innerHTML=mandalval.contents; 
 			});
 			goal_no++;
 		}
-	
-	
-	//위 코드를 for문으로 돌리려다가 실패 (innerHTML 오류)	
-	/*
-	for(i=1;i<=8;i++){
-			var params = {id: uid,MG_no:"1",goal_no: i};
-			
-			AJAX.call("jsp/MymandalGet.jsp", params, function(data) {
-				mandalval = JSON.parse(data.trim());
-				console.log("goal0"+i+"= "+mandalval.contents);
-				document.getElementsByClassName("con")[i+1]=mandalval.contents;
-				goal_no++;
-			});
-			
-			//document.getElementsByClassName("con")[0].innerHTML=mandalval.contents;			
-	}
-	*/
 	
 	}
 	
@@ -238,7 +221,7 @@
 		
 		var params = new FormData();
 		params.append("id", id);
-		params.append("MG_no","1");
+		params.append("MG_no","8");
 		
 		if(count == 1){
 			var jsonstr_goal01 = JSON.stringify(jsonobj);
@@ -246,7 +229,6 @@
 			var url ="jsp/Mymandal_goal.jsp";
 			count++;
 			upload2(url,params);
-			console.log(jsonstr_goal01);
 		}else if(count == 2){
 			var jsonstr_goal02 = JSON.stringify(jsonobj);
 			params.append("jsonstr_goal02",jsonstr_goal02);
@@ -312,6 +294,5 @@
 	function check() {window.location.href = "Check.html";}
 	function myInfo() {window.location.href = "myInfo.html";}
 	function myfeed() {window.location.href = "myfeed.html";}
-	function Mymandal_02() {window.location.href = "Mymandal_02.html";}
-	function Mymandal_03_MG02() {window.location.href = "Mymandal_03_MG02.html";}
+	function Mymandal_03_MG07() {window.location.href = "Mymandal_03_MG07.html";}
 </script>

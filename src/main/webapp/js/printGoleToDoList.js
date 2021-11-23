@@ -12,14 +12,6 @@ var todayArr = new Array();
 // 오늘 할 일 탐색
 var d=new Date();
 var today = d.getDay();
-var count=0;
-
-for(var num=1;num<=81;num++){
-    if(dayArr[7*(num-1)+today]==1){
-        todayArr[count]=7*(num-1)+today;//num는 칸번호, today는 요일
-        count++
-    }
-}
 
 
 //첫번쨰 중간목표
@@ -34,7 +26,7 @@ document.write("<br>"+contents[5]+"<br>");
          checkboxplus.name="finished";
          checkboxplus.value=printListContents;
          document.getElementById("ToDoList").appendChild(checkboxplus);
-         document.write('&nbsp'+'<span id="lank1">'+printListContents+'</span>');
+         document.write('&nbsp'+'<span class="MG01List">'+printListContents+'</span>');
          document.write('<br>');
       }
    }
@@ -51,7 +43,7 @@ document.write("<br>"+contents[14]+"<br>");
          checkboxplus.name="finished";
          checkboxplus.value=printListContents;
          document.getElementById("ToDoList").appendChild(checkboxplus);
-         document.write('&nbsp'+'<span id="lank1">'+printListContents+'</span>');
+         document.write('&nbsp'+'<span class="MG02List">'+printListContents+'</span>');
          document.write('<br>');
       }
    }
@@ -68,7 +60,7 @@ document.write("<br>"+contents[23]+"<br>");
          checkboxplus.name="finished";
          checkboxplus.value=printListContents;
          document.getElementById("ToDoList").appendChild(checkboxplus);
-         document.write('&nbsp'+'<span id="lank1">'+printListContents+'</span>');
+         document.write('&nbsp'+'<span class="MG03List">'+printListContents+'</span>');
          document.write('<br>');
       }
    }
@@ -86,7 +78,7 @@ document.write("<br>"+contents[32]+"<br>");
          checkboxplus.name="finished";
          checkboxplus.value=printListContents;
          document.getElementById("ToDoList").appendChild(checkboxplus);
-         document.write('&nbsp'+'<span id="lank1">'+printListContents+'</span>');
+         document.write('&nbsp'+'<span class="MG04List">'+printListContents+'</span>');
          document.write('<br>');
       }
    }
@@ -105,7 +97,7 @@ document.write("<br>"+contents[50]+"<br>");
          checkboxplus.name="finished";
          checkboxplus.value=printListContents;
          document.getElementById("ToDoList").appendChild(checkboxplus);
-         document.write('&nbsp'+'<span id="lank1">'+printListContents+'</span>');
+         document.write('&nbsp'+'<span class="MG05List">'+printListContents+'</span>');
          document.write('<br>');
       }
    }
@@ -122,7 +114,7 @@ document.write("<br>"+contents[59]+"<br>");
          checkboxplus.name="finished";
          checkboxplus.value=printListContents;
          document.getElementById("ToDoList").appendChild(checkboxplus);
-         document.write('&nbsp'+'<span id="lank1">'+printListContents+'</span>');
+         document.write('&nbsp'+'<span class="MG06List">'+printListContents+'</span>');
          document.write('<br>');
       }
    }
@@ -139,7 +131,7 @@ document.write("<br>"+contents[68]+"<br>");
          checkboxplus.name="finished";
          checkboxplus.value=printListContents;
          document.getElementById("ToDoList").appendChild(checkboxplus);
-         document.write('&nbsp'+'<span id="lank1">'+printListContents+'</span>');
+         document.write('&nbsp'+'<span class="MG07List">'+printListContents+'</span>');
          document.write('<br>');
       }
    }
@@ -157,7 +149,7 @@ document.write("<br>"+contents[77]+"<br>");
          checkboxplus.name="finished";
          checkboxplus.value=printListContents;
          document.getElementById("ToDoList").appendChild(checkboxplus);
-         document.write('&nbsp'+'<span id="lank1">'+printListContents+'</span>');
+         document.write('&nbsp'+'<span class="MG08List">'+printListContents+'</span>');
          document.write('<br>');
       }
    }

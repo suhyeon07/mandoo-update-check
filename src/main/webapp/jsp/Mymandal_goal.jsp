@@ -8,12 +8,13 @@
 <%@ page import="org.apache.commons.fileupload.servlet.*" %> 
 
 <%
-	request.setCharacterEncoding("utf-8");
 	
-	String id=null, MG_no = null, jsonstr_goal01=null, jsonstr_goal02=null, jsonstr_goal03=null, 
+	
+	String id = null, MG_no = null, jsonstr_goal01 = null, jsonstr_goal02=null, jsonstr_goal03=null, 
 			jsonstr_goal04=null, jsonstr_goal05=null, jsonstr_goal06=null, jsonstr_goal07=null, jsonstr_goal08=null; 
 	byte[] ufile = null; 
-
+	request.setCharacterEncoding("utf-8");
+	
 	ServletFileUpload sfu = new ServletFileUpload(new DiskFileItemFactory()); 
 	List items = sfu.parseRequest(request);
 	Iterator iter = items.iterator();
@@ -24,13 +25,13 @@
 		
 		if(item.isFormField()) {
 			String value = item.getString("utf-8");
-			if (name.equals("id")) id=value;
+			if (name.equals("id")) id = value;
 			if (name.equals("MG_no")) MG_no = value;
 			
 			if (name.equals("jsonstr_goal01")) {
 				jsonstr_goal01 = value;
 		
-				Mandal_goalDAO dao = new Mandal_goalDAO();
+				Mandal_goalDAO2 dao = new Mandal_goalDAO2();
 
 				if (dao.updategoal01(id,MG_no,jsonstr_goal01)){
 					out.print("OK");
@@ -39,7 +40,6 @@
 					out.print("ER");
 					}
 			}
-			
 			if (name.equals("jsonstr_goal02")) {
 				jsonstr_goal02 = value;
 		
@@ -132,8 +132,5 @@
 			}
 		}
 	}
-	
-	
-	
 
 %>

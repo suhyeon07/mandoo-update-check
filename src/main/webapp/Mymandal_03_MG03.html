@@ -12,7 +12,7 @@
 	<div class="page-hdr">만다라트</div>
 	<div class="page-body"> 
 		<div class="section pad-24 mtop-30">		
-			<div class="back-icon" onclick="Mymandal_02()">
+			<div class="back-icon" onclick="Mymandal_03_MG02()">
 		 		<img src="https://i.imgur.com/bXeUiMt.png">
 			</div>
 	
@@ -29,15 +29,16 @@
            <div class="box" id="box9"><div class="con"></div></div>
         </div>
         
-        <script type="text/javascript">
+       	<script type="text/javascript">
 		//세부목표 출력
-		for(var i=0;i<9;i++)
-			document.getElementsByClassName("con")[i].innerHTML=contents[i+1];
+		//for(var i=0;i<9;i++)
+		//	document.getElementsByClassName("con")[i].innerHTML=contents[i+1];
+		
 		</script>    
 		
 		<br><br><br><br><br><br><br><br><br><br><br><br>
 		
-		<input type="button" value="다음" onClick="Mymandal_03_MG02()">
+		<input type="button" value="다음" onClick="Mymandal_03_MG04()">
 		<br><br><br>
 		
 		<input type="text" Placeholder="세부 목표를 적어주세요" id="contents" class="mtop-10"></input><br>
@@ -106,28 +107,91 @@
 <script>
 	var count=1;
 	
-	$(document).ready(function() {
-		Page.init(setup); 
-	});
+	$(document).ready(function() {Page.init(setup); });
 	
 	var loginId = null;
+	var mandalval;
+	var goal_no=1;
 	
 	function setup(uid){
-		loginId = uid;	
-	}
+		loginId = uid;
+
+	var params = {id: uid,MG_no:"3"};
 	
+	AJAX.call("jsp/MymandalGet_MG.jsp", params, function(data) {
+		mandalval = data.trim();
+		document.getElementsByClassName("con")[4].innerHTML=mandalval; 
+	});
+	
+		//만다라트에 보이기
+		if(goal_no==1){
+			var params = {id: uid,MG_no:"3",goal_no: goal_no};
+			AJAX.call("jsp/MymandalGet.jsp", params, function(data) {
+				mandalval = JSON.parse(data.trim());
+				document.getElementsByClassName("con")[0].innerHTML=mandalval.contents; 
+			});
+			goal_no++;
+			
+		}if(goal_no==2){
+			var params = {id: uid,MG_no:"3",goal_no: goal_no};
+			AJAX.call("jsp/MymandalGet.jsp", params, function(data) {
+				mandalval = JSON.parse(data.trim());
+				document.getElementsByClassName("con")[1].innerHTML=mandalval.contents; 
+			});
+			goal_no++;
+		}if(goal_no==3){
+			var params = {id: uid,MG_no:"3",goal_no: goal_no};
+			AJAX.call("jsp/MymandalGet.jsp", params, function(data) {
+				mandalval = JSON.parse(data.trim());
+				document.getElementsByClassName("con")[2].innerHTML=mandalval.contents; 
+			});
+			goal_no++;
+		}if(goal_no==4){
+			var params = {id: uid,MG_no:"3",goal_no: goal_no};
+			AJAX.call("jsp/MymandalGet.jsp", params, function(data) {
+				mandalval = JSON.parse(data.trim());
+				document.getElementsByClassName("con")[3].innerHTML=mandalval.contents; 
+			});
+			goal_no++;
+		}if(goal_no==5){
+			var params = {id: uid,MG_no:"3",goal_no: goal_no};
+			AJAX.call("jsp/MymandalGet.jsp", params, function(data) {
+				mandalval = JSON.parse(data.trim());
+				document.getElementsByClassName("con")[5].innerHTML=mandalval.contents; 
+			});
+			goal_no++;
+		}if(goal_no==6){
+			var params = {id: uid,MG_no:"3",goal_no: goal_no};
+			AJAX.call("jsp/MymandalGet.jsp", params, function(data) {
+				mandalval = JSON.parse(data.trim());
+				document.getElementsByClassName("con")[6].innerHTML=mandalval.contents; 
+			});
+			goal_no++;
+		}if(goal_no==7){
+			var params = {id: uid,MG_no:"3",goal_no: goal_no};
+			AJAX.call("jsp/MymandalGet.jsp", params, function(data) {
+				mandalval = JSON.parse(data.trim());
+				document.getElementsByClassName("con")[7].innerHTML=mandalval.contents; 
+			});
+			goal_no++;
+		}if(goal_no==8){
+			var params = {id: uid,MG_no:"3",goal_no: goal_no};
+			AJAX.call("jsp/MymandalGet.jsp", params, function(data) {
+				mandalval = JSON.parse(data.trim());
+				document.getElementsByClassName("con")[8].innerHTML=mandalval.contents; 
+			});
+			goal_no++;
+		}
+	
+	}
 	
 	function upload() {
 		id = loginId;
 		
 		var contents = $("#contents").val().trim(); 
 	
-		var monval=null;
-		var tueval=null;
-		var wedval=null;
-		var thuval=null;
-		var frival=null;
-		//var count=null;
+		var monval=null, tueval=null, wedval=null,thuval=null,frival=null;
+
 		
 		$('input:checkbox[name="day"]').each(function() {
 		    if(this.checked){
@@ -146,11 +210,8 @@
 		    	if(this.value=="금"){
 		    		frival="1";
 		    	}
-	    } //else {
-	    	//count+=1;
-	    	 //if(count==5) alert("요일을 선택하세요.");
-	    	 //}
-		    })
+	    	}
+		})
 		
 		var prtval = $('input[name="prt"]:checked').val();
 		if(prtval==undefined) prtval=null;
@@ -168,21 +229,18 @@
 			var url ="jsp/Mymandal_goal.jsp";
 			count++;
 			upload2(url,params);
-			return;
-		}
-		else if(count == 2){
+		}else if(count == 2){
 			var jsonstr_goal02 = JSON.stringify(jsonobj);
 			params.append("jsonstr_goal02",jsonstr_goal02);
 			var url ="jsp/Mymandal_goal.jsp";
 			count++;
 			upload2(url,params);
-		}
-		else if(count == 3){
+		}else if(count == 3){
 			var jsonstr_goal03 = JSON.stringify(jsonobj);
 			params.append("jsonstr_goal03",jsonstr_goal03);
 			var url ="jsp/Mymandal_goal.jsp";
 			count++;
-			upload2(url,params);
+			upload2(url,params);	
 		}
 		else if(count == 4){
 			var jsonstr_goal04 = JSON.stringify(jsonobj);
@@ -236,6 +294,6 @@
 	function check() {window.location.href = "Check.html";}
 	function myInfo() {window.location.href = "myInfo.html";}
 	function myfeed() {window.location.href = "myfeed.html";}
-	function Mymandal_02() {window.location.href = "Mymandal_02.html";}
 	function Mymandal_03_MG02() {window.location.href = "Mymandal_03_MG02.html";}
+	function Mymandal_03_MG04() {window.location.href = "Mymandal_03_MG04.html";}
 </script>

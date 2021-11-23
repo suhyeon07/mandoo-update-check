@@ -33,13 +33,13 @@
 		</script>
         </section>
         <section id="section2">
-        	<form name="whichToDoList" id="whichToDoList" method="post">
+        	<form name="whichToDoList" id="whichToDoList">
         		<input type="date" name="date" id="datepicker">
-            	<select name="mandalArtOption" id="mandalArtOption" onchange="handleOnChange(this)">
-					<option value="목표별">목표별</option>
-					<option value="우선순위별" selected>우선순위별</option>
+            	<select name="mandalArtOption" id="mandalArtOption">
+					<option value="gole">목표별</option>
+					<option value="lank" selected>우선순위별</option>
 				</select>
-				<input type="submit" value="변경" class="submit">
+				<input type="submit" value="" class="submit">
         	</form>
             <form name="ToDoList" id="ToDoList">
                 <script type="text/javascript" src="js/printGoleToDoList.js"></script>

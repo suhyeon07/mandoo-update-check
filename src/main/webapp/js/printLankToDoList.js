@@ -19,7 +19,7 @@ document.write("<br>1순위<br>");
          checkboxplus.name="finished";
          checkboxplus.value=printListContents;
          document.getElementById("ToDoList").appendChild(checkboxplus);
-         document.write('&nbsp'+'<span id="lank1">'+printListContents+'</span>');
+         document.write('&nbsp'+'<span class="lank1List">'+printListContents+'</span>');
          document.write('<br>');
       }
    }
@@ -36,7 +36,7 @@ document.write("<br>2순위<br>");
          checkboxplus.name="finished";
          checkboxplus.value=printListContents;
          document.getElementById("ToDoList").appendChild(checkboxplus);
-         document.write('&nbsp'+'<span id="lank1">'+printListContents+'</span>');
+         document.write('&nbsp'+'<span class="lank2List">'+printListContents+'</span>');
          document.write('<br>');
       }
    }
@@ -53,7 +53,7 @@ document.write("<br>3순위<br>");
          checkboxplus.name="finished";
          checkboxplus.value=printListContents;
          document.getElementById("ToDoList").appendChild(checkboxplus);
-         document.write('&nbsp'+'<span id="lank1">'+printListContents+'</span>');
+         document.write('&nbsp'+'<span class="lank3List">'+printListContents+'</span>');
          document.write('<br>');
       }
    }
@@ -70,7 +70,7 @@ document.write("<br>4순위<br>");
          checkboxplus.name="finished";
          checkboxplus.value=printListContents;
          document.getElementById("ToDoList").appendChild(checkboxplus);
-         document.write('&nbsp'+'<span id="lank1">'+printListContents+'</span>');
+         document.write('&nbsp'+'<span class="lank4List">'+printListContents+'</span>');
          document.write('<br>');
       }
    }
@@ -87,7 +87,7 @@ document.write("<br>5순위<br>");
          checkboxplus.name="finished";
          checkboxplus.value=printListContents;
          document.getElementById("ToDoList").appendChild(checkboxplus);
-         document.write('&nbsp'+'<span id="lank1">'+printListContents+'</span>');
+         document.write('&nbsp'+'<span class="lank5List">'+printListContents+'</span>');
          document.write('<br>');
       }
    }
